@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<directories>
+<path source="D:\JdeMywork\TulipFlowSystem\ViewController\public_html\jsp" destination="E:\apache-tomcat-7.0.5\webapps\TulipFlowSystem\jsp">1</path>
+  <path source="D:\JdeMywork\TulipFlowSystem\ViewController\public_html\css" destination="E:\apache-tomcat-7.0.5\webapps\TulipFlowSystem\css">2</path>
+  <path source="D:\JdeMywork\TulipFlowSystem\ViewController\classes\dev\tulipflow\view" destination="E:\apache-tomcat-7.0.5\webapps\TulipFlowSystem\WEB-INF\classes\dev\tulipflow\view">5</path>
+  <path source="D:\JdeMywork\TulipFlowSystem\Model\classes\dev\tulipflow\business" destination="E:\apache-tomcat-7.0.5\webapps\TulipFlowSystem\WEB-INF\classes\dev\tulipflow\business">6</path>
+  <path source="D:\JdeMywork\TulipFlowSystem\Model\classes\dev\tulipflow\dao" destination="E:\apache-tomcat-7.0.5\webapps\TulipFlowSystem\WEB-INF\classes\dev\tulipflow\dao">7</path>
+  <path source="D:\JdeMywork\TulipFlowSystem\Model\classes\dev\tulipflow\entity" destination="E:\apache-tomcat-7.0.5\webapps\TulipFlowSystem\WEB-INF\classes\dev\tulipflow\entity">8</path>
+</directories>
