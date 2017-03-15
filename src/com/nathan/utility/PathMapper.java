@@ -2,6 +2,11 @@ package com.nathan.utility;
 
 import java.io.File;
 
+/**
+ * 路径映射器
+ * @author Administrator
+ *
+ */
 public class PathMapper {
     private int sequence;
     private File source;

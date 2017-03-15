@@ -257,7 +257,7 @@ public class FilesUI extends JFrame {
 
         }
         //logs.setText(logs.getText() + "--paths size:" + paths.size() + " \n");
-        logs.setText(logs.getText() + "--同步路径配置完毕... \n");
+        logs.setText(logs.getText() + "--同步路径配置完毕.... \n");
         FilesProcess fp = new FilesProcess(isConsistent.isSelected());
         // jProgressBar1.setValue(20);
         ProgressPeer.setProgress(10);
