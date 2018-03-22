@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="false" scanPeriod="60 seconds" >
+    <!--  <include resource="org/springframework/boot/logging/logback/defaults.xml" /> -->
+    <property name="LOG_PATH" value="${catalina.base}/logs/"/>
+     <!-- <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+    <include resource="org/springframework/boot/logging/logback/file-appender.xml" /> -->
+    
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<!-- <layout class="ch.qos.logback.classic.PatternLayout"></layout> -->
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>%date{yyyy-MM-dd HH:mm:ss} %-5level %logger - %msg%n</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_PATH}/calf-job.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_PATH}/calf-job.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+			<maxHistory>10</maxHistory>
+			<timeBasedFileNamingAndTriggeringPolicy
+					class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<!-- or whenever the file size reaches 100MB -->
+				<maxFileSize>500MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>%date{yyyy-MM-dd HH:mm:ss} %-5level %logger - %msg%n</pattern>
+		</encoder>
+	</appender>
+	
+    <root level="INFO">
+        <appender-ref ref="console" />
+        <appender-ref ref="rollingFile" />
+    </root>
+   <!--  <logger name="com.honglu" level="INFO"/> -->
+</configuration>
